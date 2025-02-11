@@ -1,161 +1,117 @@
-/**
- * @name Main
- * @version 0.9.9
- * @author TheCommieAxolotl#0001
- * @authorId 538487970408300544
- * @description A clean theme inspired by Google's Material Design Guidelines.
- * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign
- * @website https://thecommieaxolotl.github.io/BetterDiscord-Stuff/
- * @invite g2KnUw7u7N
- * @donate https://github.com/sponsors/TheCommieAxolotl/
- * @BDEditor MaterialDesign
-*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>︻</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/f1/dd/12/f1dd12a61da24561ac5997c8308ab37e.gif') center center fixed; /* Replace 'your-background.gif' with your actual file path */
+            background-size: cover;
+            color: rgb(255, 255, 255);
+        }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap');
-@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
-@import url('https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/UserBadges.css');
-@import url('https://maendisease.github.io/BetterDiscordStuff/css/bettterInvites.css');
-@import url('https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/Clients/betterdiscord.css');
-@import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
+        header {
+            text-align: center;
+            padding: 1em 0;
+        }
 
-:root {
-  --font-primary: Roboto;
-  --font-code: Source Code Pro;
-  --floating-background-opacity: 100;
-  --floating-background-blur: 0px;
-  --version: "0.9.9";
-  --version0_9_9: none;
-  --01dpShadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  --02dpShadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  --03dpShadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-  --04dpShadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  --06dpShadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-  --08dpShadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
-  --12dpShadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12);
-  --16dpShadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
-  --24dpShadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
-  --brand-experiment: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.75% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-100: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.98% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-130: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.961% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-160: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.942% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-200: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.923% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-230: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.903% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-260: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.884% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-300: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.865% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-330: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.846% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-360: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.827% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-400: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.80% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-430: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.78% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-460: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(0.769% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-500: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-530: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.69% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-560: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.63% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-600: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.57% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-630: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.51% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-660: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.45% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-700: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.39% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-730: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.33% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-760: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.27% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-800: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.21% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-830: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.15% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-860: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.9% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-900: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.3% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
-  --brand-experiment-05a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0005 * var(--skin-accent-a, 100)));
-  --brand-experiment-10a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.001 * var(--skin-accent-a, 100)));
-  --brand-experiment-15a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0015 * var(--skin-accent-a, 100)));
-  --brand-experiment-20a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.002 * var(--skin-accent-a, 100)));
-  --brand-experiment-25a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0025 * var(--skin-accent-a, 100)));
-  --brand-experiment-30a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.003 * var(--skin-accent-a, 100)));
-  --brand-experiment-35a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0035 * var(--skin-accent-a, 100)));
-  --brand-experiment-40a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.004 * var(--skin-accent-a, 100)));
-  --brand-experiment-45a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0045 * var(--skin-accent-a, 100)));
-  --brand-experiment-50a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.005 * var(--skin-accent-a, 100)));
-  --brand-experiment-55a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0055 * var(--skin-accent-a, 100)));
-  --brand-experiment-60a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.006 * var(--skin-accent-a, 100)));
-  --brand-experiment-65a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0065 * var(--skin-accent-a, 100)));
-  --brand-experiment-70a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.007 * var(--skin-accent-a, 100)));
-  --brand-experiment-75a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0075 * var(--skin-accent-a, 100)));
-  --brand-experiment-80a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.008 * var(--skin-accent-a, 100)));
-  --brand-experiment-85a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0085 * var(--skin-accent-a, 100)));
-  --brand-experiment-90a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.009 * var(--skin-accent-a, 100)));
-  --brand-experiment-95a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0095 * var(--skin-accent-a, 100)));
-  --rs-small-spacing: 0px;
-  --rs-medium-spacing: 0px;
-  --rs-large-spacing: 0px;
-  --rs-small-width: 2px;
-  --rs-medium-width: 2px;
-  --rs-large-width: 1px;
-  --rs-avatar-shape: 50%;
-  --rs-online-color: #00FF15;
-  --rs-idle-color: #faa61a;
-  --rs-dnd-color: #f04747;
-  --rs-offline-color: #636b75;
-  --rs-streaming-color: #643da7;
-  --rs-phone-visible: block;
-}
+        main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255, 0); /* Semi-transparent white background */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+        }
 
-.theme-dark {
-  --skin-accent-h: 316;
-  --skin-accent-s: 100%;
-  --skin-accent-l: 58;
-  --skin-accent-a: 100;
-  --skin-background-h: 0;
-  --skin-background-s: 0%;
-  --skin-background-l: 64;
-  --skin-background-a: 100;
-  --switch-checked-background: 310,100%,50%;
-  --switch-unchecked-background: #74796e33;
-  --switch-unchecked-color: #74796e;
-  --skin-name: "Default";
-  --skin-author: "TheCommieAxolotl";
-  --00dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.07% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --01dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.11% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --02dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.13% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --03dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.14% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --04dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.15% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --06dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.17% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --08dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.18% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --12dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.19% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --16dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.2% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --24dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.22% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --26dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.27% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-  --background-primary: var(--02dp);
-  --background-secondary: var(--01dp);
-  --background-mobile-secondary: var(--01dp);
-  --background-accent: var(--12dp);
-  --background-tertiary: var(--00dp);
-  --background-secondary-alt: var(--06dp);
-  --channeltextarea-background: var(--24dp);
-  --background-floating: var(--24dp);
-  --background-modifier-selected: var(--06dp);
-  --background-modifier-hover: var(--02dp);
-  --background-modifier-active: var(--04dp);
-  --background-mentioned: transparent;
-  --background-mentioned-hover: #e7c21f04;
-  --info-warning-foreground: hsl(54, calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), 75%);
-  --scrollbar-thin-thumb: var(--12dp);
-  --scrollbar-thin-track: transparent;
-  --scrollbar-auto-thumb: var(--12dp);
-  --scrollbar-auto-track: var(--04dp);
-  --input-background: var(--08dp);
-  --switch-checked-background: hsl(101, calc(var(--saturation-factor) * 54%), 27%);
-  --switch-unchecked-background: #74796e33;
-  --switch-unchecked-color: #74796e;
-}
+        section {
+            margin-bottom: 20px;
+        }
 
-.theme-light {
-  --skin-accent-h: 316;
-  --skin-accent-s: 100%;
-  --skin-accent-l: 58;
-  --skin-accent-a: 100;
-  --switch-checked-background: 310,100%,50%;
-  --switch-unchecked-background: #74796e33;
-  --switch-unchecked-color: #74796e;
-  --skin-name: "Default Light";
-  --skin-author: "TheCommieAxolotl";
-}
+        h2 {
+            color: #ffffff;
+        }
 
-/* Any custom CSS below here */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
 
+        li {
+            margin-bottom: 10px;
+        }
 
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #dynamicName {
+            font-size: 1.5em;
+        }
+
+        #dynamicImage {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="dynamicName"></h1>
+        <p></p>
+    </header>
+
+    <main>
+        <section style="text-align: center;">
+            <h2></h2>
+            <div>
+                <a href="https://twitter.com/ximbothy" target="_blank"><img src="https://imgs.search.brave.com/cPu2r59pQwQ1a8CmJropQYxo8-T4dxv0COrpY5iOvT8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/aWNvbnNkYi5jb20v/aWNvbnMvcHJldmll/dy93aGl0ZS90d2l0/dGVyLXh4bC5wbmc" alt="Twitter" width="50" height="50"></a>
+                <a href="https://www.twitch.tv/ximdesigns" target="_blank"><img src="https://imgs.search.brave.com/eTEXS9f0ZRdA1uo0aCTQaSr7QUzOjrBFsf0APdLJe8Y/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWRpZ2l0YWxhZ2Vu/Y3kuY29tLmF1L3dw/LWNvbnRlbnQvdXBs/b2Fkcy9Ud2l0Y2gt/aWNvbi13aGl0ZS5w/bmc" alt="Twitch" width="50" height="50"></a>
+                <a href="https://discord.com/users/739036590998814771" target="_blank"><img src="https://imgs.search.brave.com/trs56Jy1_490_6acbRkFBDAiDDl9Kq9S87kdDZ74-z0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbXAw/LnMzLmFtYXpvbmF3/cy5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMTkvMDUvMjEx/MzUzMzQvZGlzY29y/ZC1sb2dvLXdoaXRl/LnBuZw" alt="Discord" width="50" height="50"></a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript to change the name over time
+        function changeName() {
+            const names = ["e","ed", "edu", "educ", "educa", "educat", "educate", "educat", "educa", "educ", "edu", "ed", "e"]; // Add more names as needed
+            const nameElement = document.getElementById("dynamicName");
+
+            let index = 0;
+            setInterval(() => {
+                nameElement.textContent = names[index];
+                index = (index + 1) % names.length;
+            }, 300); // Change name every 5 seconds
+        }
+
+        // JavaScript to animate the window title
+        function animateWindowTitle() {
+            const titles = ["︻", "︻デ", "︻デ═", "︻デ═一", "︻デ═", "︻デ", "︻"]; // Add more titles as needed
+            let index = 0;
+
+            setInterval(() => {
+                document.title = titles[index];
+                index = (index + 1) % titles.length;
+            }, 500); // Change title every 3 seconds
+        }
+
+        // Call the functions when the page loads
+        window.onload = function() {
+            changeName();
+            animateWindowTitle();
+        };
+    </script>
+
+</body>
+</html>
